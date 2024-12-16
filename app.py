@@ -37,5 +37,31 @@ first_hist = ['condition', 'transmission','cylinders', 'paint_color','type']
 lets_try = st.selectbox('Categories', first_hist)
 
 hist1 = px.histogram( data, x='days_listed', color=lets_try)
+hist1.update_layout(title= "<b> Days posted effected by {}</b>".format(lets_try) )
+
+
 
 st.plotly_chart(hist1)
+
+
+
+def car_age(x):
+    if x<4: return '<4'
+    elif x>=4 and x<8: return '4-7'
+    elif x>=7 and x<11: return '7-11'
+    elif x>=11 and x<15: return '11-15'
+    elif x>=15 and x<21: return '15-21'
+    else: return '>21'
+
+data['years'] = 2020 - data['model_year']
+
+data['car_years'] = data['years'].apply(car_age)
+
+scat_cat = ['odometer', 'type', 'condition', 'price']
+
+scat_cat_list = st.selectbox('On the Market Variables', scat_cat)
+
+scat1 = px.scatter(data, x='days_listed', y=scat_cat_list, color= 'car_years', hover_data=['model_year'])
+
+st.plotly_chart(scat1)
+
