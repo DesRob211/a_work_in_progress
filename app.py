@@ -53,6 +53,10 @@ def car_age(x):
     elif x>=15 and x<21: return '15-21'
     else: return '>21'
 
+st.write("""
+#### Let's use odometer, price, type and condition.
+""")
+
 data['years'] = 2020 - data['model_year']
 
 data['car_years'] = data['years'].apply(car_age)
