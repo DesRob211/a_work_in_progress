@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 st.header('New and Used Vehicles')
-st.write(""" #### Comparing New and Used cars. Use the data below to compare diferent vehicles based on different factors.""")
+st.write(""" #### Comparing New and Used cars. Use the data below to compare vehicles based on different factors.""")
 st.checkbox('Include new cars')
 
 data = pd.read_csv('vehicles_us.csv')
