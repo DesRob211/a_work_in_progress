@@ -1,1 +1,3 @@
-# a_work_in_progress
+https://a-work-in-progress.onrender.com
+
+This is a project for TripleTen that includes a dataset that I have used to filter based on different variables, and made a couple charts for better understanding of the data based for comparsion.  I used the number of days listed as my main variable to see the different factors that could be effecting the length of time. The condition , the type, the odometer where all taken into consideration when compared to the days listed.
